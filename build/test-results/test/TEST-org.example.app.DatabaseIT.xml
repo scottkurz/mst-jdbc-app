@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.example.app.DatabaseIT" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-05-18T18:33:09" hostname="Adams-MacBook-Pro.local" time="0.275">
+  <properties/>
+  <testcase name="testGetAllPeople()" classname="org.example.app.DatabaseIT" time="0.249"/>
+  <testcase name="testGetPerson()" classname="org.example.app.DatabaseIT" time="0.025"/>
+  <system-out><![CDATA[0 DEBUG org.microshed.testing.ApplicationEnvironment  - Found ApplicationEnvironment class org.microshed.testing.testcontainers.config.HollowTestcontainersConfiguration with priority=-20, available=false
+2 DEBUG org.microshed.testing.ApplicationEnvironment  - Found ApplicationEnvironment class org.microshed.testing.testcontainers.config.TestcontainersConfiguration with priority=-30, available=true
+4 DEBUG org.microshed.testing.ApplicationEnvironment  - Found ApplicationEnvironment class org.microshed.testing.ManuallyStartedConfiguration with priority=-10, available=false
+28 INFO org.testcontainers.dockerclient.DockerClientProviderStrategy  - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+560 INFO org.testcontainers.dockerclient.UnixSocketClientProviderStrategy  - Accessing docker with local Unix socket
+560 INFO org.testcontainers.dockerclient.DockerClientProviderStrategy  - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+672 INFO org.testcontainers.DockerClientFactory  - Docker host IP address is localhost
+701 INFO org.testcontainers.DockerClientFactory  - Connected to docker: 
+  Server Version: 19.03.5
+  API Version: 1.40
+  Operating System: Docker Desktop
+  Total Memory: 1998 MB
+6716 INFO org.testcontainers.utility.RegistryAuthLocator  - Credential helper/store (docker-credential-desktop) does not have credentials for quay.io
+7621 INFO org.testcontainers.DockerClientFactory  - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+7622 INFO org.testcontainers.DockerClientFactory  - Checking the system...
+7622 INFO org.testcontainers.DockerClientFactory  - ✔︎ Docker server version should be at least 1.6.0
+7816 INFO org.testcontainers.DockerClientFactory  - ✔︎ Docker environment should have more than 2GB free disk space
+7953 INFO org.testcontainers.images.builder.ImageFromDockerfile  - Pre-emptively checking local images for 'openliberty/open-liberty:full-java8-openj9-ubi', referenced via a Dockerfile. If not available, it will be pulled.
+11045 INFO org.testcontainers.images.builder.ImageFromDockerfile  - Transferred 0 bytes to Docker daemon
+15268 INFO org.microshed.testing.testcontainers.ApplicationContainer  - Found exposed ports: [9080/tcp, 9443/tcp]
+15268 INFO org.microshed.testing.testcontainers.ApplicationContainer  - Automatically selecting default HTTP port: 9080
+15269 INFO org.microshed.testing.testcontainers.ApplicationContainer  - Using ServerAdapter: org.microshed.testing.testcontainers.ApplicationContainer.DefaultServerAdapter
+15270 INFO org.microshed.testing.jupiter.MicroShedTestExtension  - Using ApplicationEnvironment class: org.microshed.testing.testcontainers.config.TestcontainersConfiguration
+15273 DEBUG org.microshed.testing.testcontainers.config.TestcontainersConfiguration  - No networks explicitly defined. Using shared network for all containers in class org.example.app.AppContainerConfig
+15274 DEBUG org.microshed.testing.testcontainers.config.TestcontainersConfiguration  - No networks explicitly defined. Using shared network for all containers in class org.example.app.DatabaseIT
+16393 DEBUG org.microshed.testing.testcontainers.config.TestcontainersConfiguration  - Using default generated JWT settings for GenericContainer(exposedPorts=[], portBindings=[], extraHosts=[], networkMode=null, network=org.testcontainers.containers.Network$1@1fbe6078, networkAliases=[tc-Dg5SR72H], image=RemoteDockerImage(imageName=testcontainers/mpapp-hf3vurhbg8:latest, imagePullPolicy=DefaultPullPolicy()), env=[POSTGRES_HOSTNAME=testpostgres, POSTGRES_PORT=5432, mp_jwt_verify_issuer=http://testissuer.com, mp_jwt_verify_publickey=-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsg26mkApM10Y3fr4un8Y
+dRdWeu8cjed8ofNwz06OBQ9zxv6hhFHFqdF7wd5tsUcRTb+jzDuAqDAJXH4EyYlu
+47S/5JxI3+dVKRZ8MGbaanQ/4Ko0PoMtS+JmpY6eEMeLsIyCz2VS+WKLmje+d8z3
+Xhhgu26IlYZq9H4QtholWZRN52IY72ofK/kpd/vh5S7BhFG2OESq6kCn1VLh4UwX
+gSX0DmoRKg1gPCyKm7JWZVL18+VRGxyps0LK3jX9uSCwtanmaOCxu6K6v3gKWuNn
+Y5L2t3migDmIlzKE0vVky/4vd/bIQbg8VjLVuBa+X3cvNzUBTTN1O9yqKy2QlM3k
+uQIDAQAB
+-----END PUBLIC KEY-----], labels={}, commandParts=[], binds=[], privilegedMode=false, volumesFroms=[], linkedContainers={}, startupCheckStrategy=org.testcontainers.containers.startupcheck.IsRunningStartupCheckStrategy@e69d3eff, startupAttempts=1, workingDirectory=null, shmSize=null, copyToFileContainerPathMap={}, dependencies=[GenericContainer(exposedPorts=[5432], portBindings=[], extraHosts=[], networkMode=null, network=org.testcontainers.containers.Network$1@1fbe6078, networkAliases=[tc-1BMudEVC, testpostgres], image=RemoteDockerImage(imageName=postgres:9.6.12, imagePullPolicy=DefaultPullPolicy()), env=[], labels={}, commandParts=[postgres, -c, fsync=off], binds=[], privilegedMode=false, volumesFroms=[], linkedContainers={}, startupCheckStrategy=org.testcontainers.containers.startupcheck.IsRunningStartupCheckStrategy@1d1c189c, startupAttempts=1, workingDirectory=null, shmSize=null, copyToFileContainerPathMap={}, dependencies=[], dockerClient=LazyDockerClient.INSTANCE, dockerDaemonInfo=null, containerId=null, containerName=null, containerInfo=null, waitStrategy=org.testcontainers.containers.wait.LogMessageWaitStrategy@fecb34d2, logConsumers=[], createContainerCmdModifiers=[], tmpFsMapping=null, shouldBeReused=false)], dockerClient=LazyDockerClient.INSTANCE, dockerDaemonInfo=null, containerId=null, containerName=null, containerInfo=null, waitStrategy=org.testcontainers.containers.wait.HostPortWaitStrategy@8ae16d1c, logConsumers=[org.testcontainers.containers.output.Slf4jLogConsumer@b9b4617], createContainerCmdModifiers=[], tmpFsMapping=null, shouldBeReused=false)
+16394 INFO org.microshed.testing.testcontainers.config.TestcontainersConfiguration  - Starting 2 container(s) in parallel for class org.example.app.DatabaseIT
+16394 INFO org.microshed.testing.testcontainers.config.TestcontainersConfiguration  -   testcontainers/mpapp-hf3vurhbg8:latest
+16399 INFO ?? [postgres:9.6.12]  - Pulling docker image: postgres:9.6.12. Please be patient; this may take some time but only needs to be done once.
+17039 INFO ?? [postgres:9.6.12]  - Starting to pull image
+17044 INFO ?? [postgres:9.6.12]  - Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+17567 INFO ?? [postgres:9.6.12]  - Pulling image layers: 13 pending,  1 downloaded,  0 extracted, (269 KB/? MB)
+17970 INFO ?? [postgres:9.6.12]  - Pulling image layers: 12 pending,  2 downloaded,  0 extracted, (8 MB/? MB)
+18174 INFO ?? [postgres:9.6.12]  - Pulling image layers: 11 pending,  3 downloaded,  0 extracted, (11 MB/? MB)
+18690 INFO ?? [postgres:9.6.12]  - Pulling image layers: 10 pending,  4 downloaded,  0 extracted, (18 MB/? MB)
+19139 INFO ?? [postgres:9.6.12]  - Pulling image layers:  9 pending,  5 downloaded,  0 extracted, (28 MB/? MB)
+19241 INFO ?? [postgres:9.6.12]  - Pulling image layers:  8 pending,  6 downloaded,  0 extracted, (29 MB/? MB)
+19271 INFO ?? [postgres:9.6.12]  - Pulling image layers:  7 pending,  7 downloaded,  0 extracted, (29 MB/? MB)
+19480 INFO ?? [postgres:9.6.12]  - Pulling image layers:  6 pending,  8 downloaded,  0 extracted, (29 MB/? MB)
+19539 INFO ?? [postgres:9.6.12]  - Pulling image layers:  5 pending,  9 downloaded,  0 extracted, (29 MB/? MB)
+19797 INFO ?? [postgres:9.6.12]  - Pulling image layers:  4 pending, 10 downloaded,  0 extracted, (30 MB/? MB)
+19928 INFO ?? [postgres:9.6.12]  - Pulling image layers:  3 pending, 11 downloaded,  0 extracted, (34 MB/? MB)
+20167 INFO ?? [postgres:9.6.12]  - Pulling image layers:  2 pending, 12 downloaded,  0 extracted, (38 MB/? MB)
+20322 INFO ?? [postgres:9.6.12]  - Pulling image layers:  1 pending, 13 downloaded,  0 extracted, (42 MB/? MB)
+20935 INFO ?? [postgres:9.6.12]  - Pulling image layers:  1 pending, 13 downloaded,  1 extracted, (52 MB/? MB)
+21436 INFO ?? [postgres:9.6.12]  - Pulling image layers:  1 pending, 13 downloaded,  2 extracted, (67 MB/? MB)
+21642 INFO ?? [postgres:9.6.12]  - Pulling image layers:  1 pending, 13 downloaded,  3 extracted, (69 MB/? MB)
+21899 INFO ?? [postgres:9.6.12]  - Pulling image layers:  0 pending, 14 downloaded,  3 extracted, (77 MB/80 MB)
+21999 INFO ?? [postgres:9.6.12]  - Pulling image layers:  0 pending, 14 downloaded,  4 extracted, (77 MB/80 MB)
+22424 INFO ?? [postgres:9.6.12]  - Pulling image layers:  0 pending, 14 downloaded,  5 extracted, (79 MB/80 MB)
+22637 INFO ?? [postgres:9.6.12]  - Pulling image layers:  0 pending, 14 downloaded,  6 extracted, (79 MB/80 MB)
+22800 INFO ?? [postgres:9.6.12]  - Pulling image layers:  0 pending, 14 downloaded,  7 extracted, (79 MB/80 MB)
+22978 INFO ?? [postgres:9.6.12]  - Pulling image layers:  0 pending, 14 downloaded,  8 extracted, (79 MB/80 MB)
+25352 INFO ?? [postgres:9.6.12]  - Pulling image layers:  0 pending, 14 downloaded,  9 extracted, (80 MB/80 MB)
+25518 INFO ?? [postgres:9.6.12]  - Pulling image layers:  0 pending, 14 downloaded, 10 extracted, (80 MB/80 MB)
+25666 INFO ?? [postgres:9.6.12]  - Pulling image layers:  0 pending, 14 downloaded, 11 extracted, (80 MB/80 MB)
+25858 INFO ?? [postgres:9.6.12]  - Pulling image layers:  0 pending, 14 downloaded, 12 extracted, (80 MB/80 MB)
+26037 INFO ?? [postgres:9.6.12]  - Pulling image layers:  0 pending, 14 downloaded, 13 extracted, (80 MB/80 MB)
+26207 INFO ?? [postgres:9.6.12]  - Pulling image layers:  0 pending, 14 downloaded, 14 extracted, (80 MB/80 MB)
+26228 INFO ?? [postgres:9.6.12]  - Pull complete. 14 layers, pulled in 9s (downloaded 80 MB at 8 MB/s)
+26247 INFO org.microshed.testing.testcontainers.config.TestcontainersConfiguration  -   postgres:9.6.12
+26251 INFO ?? [postgres:9.6.12]  - Creating container for image: postgres:9.6.12
+26603 INFO ?? [postgres:9.6.12]  - Starting container with ID: a9f7886160ae844bb4fbd490234792b132dee8a355fcac9d7622b2c09326f795
+27314 INFO ?? [postgres:9.6.12]  - Container postgres:9.6.12 is starting: a9f7886160ae844bb4fbd490234792b132dee8a355fcac9d7622b2c09326f795
+31259 INFO ?? [postgres:9.6.12]  - Container postgres:9.6.12 started in PT5.008678S
+31261 INFO ?? [testcontainers/mpapp-hf3vurhbg8:latest]  - Creating container for image: testcontainers/mpapp-hf3vurhbg8:latest
+31454 INFO ?? [testcontainers/mpapp-hf3vurhbg8:latest]  - Starting container with ID: d22acc40267177a2831aa37891c7445905f7f442c40b3904eafd07a57817f25b
+32253 INFO ?? [testcontainers/mpapp-hf3vurhbg8:latest]  - Container testcontainers/mpapp-hf3vurhbg8:latest is starting: d22acc40267177a2831aa37891c7445905f7f442c40b3904eafd07a57817f25b
+32268 INFO org.microshed.testing.testcontainers.ApplicationContainer  - ApplicationContainer[testcontainers/mpapp-hf3vurhbg8:latest] has exposed ports:
+32269 INFO org.microshed.testing.testcontainers.ApplicationContainer  -   9080 --> 32774
+32286 INFO org.testcontainers.containers.wait.strategy.HttpWaitStrategy  - /blissful_nobel: Waiting for 30 seconds for URL: http://localhost:32774/myservice
+32414 INFO org.microshed.testing.testcontainers.ApplicationContainer  - STDOUT: 
+32989 INFO org.microshed.testing.testcontainers.ApplicationContainer  - STDOUT: Launching defaultServer (Open Liberty 20.0.0.5/wlp-1.0.40.cl200520200429-1655) on Eclipse OpenJ9 VM, version 1.8.0_252-b09 (en_US)
+33114 INFO org.microshed.testing.testcontainers.ApplicationContainer  - STDOUT: [AUDIT   ] CWWKE0001I: The server defaultServer has been launched.
+35303 INFO org.microshed.testing.testcontainers.ApplicationContainer  - STDOUT: [AUDIT   ] CWWKG0093A: Processing configuration drop-ins resource: /opt/ol/wlp/usr/servers/defaultServer/configDropins/defaults/keystore.xml
+35326 INFO org.microshed.testing.testcontainers.ApplicationContainer  - STDOUT: [AUDIT   ] CWWKG0093A: Processing configuration drop-ins resource: /opt/ol/wlp/usr/servers/defaultServer/configDropins/defaults/open-default-port.xml
+37070 INFO org.microshed.testing.testcontainers.ApplicationContainer  - STDOUT: [AUDIT   ] CWWKZ0058I: Monitoring dropins for applications.
+39804 INFO org.microshed.testing.testcontainers.ApplicationContainer  - STDOUT: [AUDIT   ] CWWKT0016I: Web application available (default_host): http://d22acc402671:9080/myservice/
+39826 INFO org.microshed.testing.testcontainers.ApplicationContainer  - STDOUT: [AUDIT   ] CWWKZ0001I: Application myservice started in 2.153 seconds.
+39958 INFO org.microshed.testing.testcontainers.ApplicationContainer  - STDOUT: [AUDIT   ] CWWKF0012I: The server installed the following features: [appClientSupport-1.0, appSecurity-2.0, appSecurity-3.0, batch-1.0, beanValidation-2.0, cdi-2.0, concurrent-1.0, distributedMap-1.0, ejb-3.2, ejbHome-3.2, ejbLite-3.2, ejbPersistentTimer-3.2, ejbRemote-3.2, el-3.0, j2eeManagement-1.1, jacc-1.5, jaspic-1.1, javaMail-1.6, javaee-8.0, jaxb-2.2, jaxrs-2.1, jaxrsClient-2.1, jaxws-2.2, jca-1.7, jcaInboundSecurity-1.0, jdbc-4.2, jms-2.0, jndi-1.0, jpa-2.2, jpaContainer-2.2, jsf-2.3, jsonb-1.0, jsonp-1.1, jsp-2.3, managedBeans-1.0, mdb-3.2, servlet-4.0, ssl-1.0, wasJmsClient-2.0, wasJmsSecurity-1.0, wasJmsServer-1.0, webProfile-8.0, websocket-1.1].
+39960 INFO org.microshed.testing.testcontainers.ApplicationContainer  - STDOUT: [AUDIT   ] CWWKF0013I: The server removed the following features: [appClientSupport-1.0, appSecurity-2.0, appSecurity-3.0, batch-1.0, concurrent-1.0, distributedMap-1.0, ejb-3.2, ejbHome-3.2, ejbLite-3.2, ejbPersistentTimer-3.2, ejbRemote-3.2, j2eeManagement-1.1, jacc-1.5, jaspic-1.1, javaMail-1.6, javaee-8.0, jaxb-2.2, jaxws-2.2, jca-1.7, jcaInboundSecurity-1.0, jms-2.0, jpa-2.2, jpaContainer-2.2, jsf-2.3, jsp-2.3, managedBeans-1.0, mdb-3.2, ssl-1.0, wasJmsClient-2.0, wasJmsSecurity-1.0, wasJmsServer-1.0, webProfile-8.0, websocket-1.1].
+39962 INFO org.microshed.testing.testcontainers.ApplicationContainer  - STDOUT: [AUDIT   ] CWWKF0011I: The defaultServer server is ready to run a smarter planet. The defaultServer server started in 7.088 seconds.
+41208 INFO org.microshed.testing.testcontainers.ApplicationContainer  - STDOUT: Seeding database with sample data
+42341 INFO ?? [testcontainers/mpapp-hf3vurhbg8:latest]  - Container testcontainers/mpapp-hf3vurhbg8:latest started in PT11.080041S
+42341 INFO org.microshed.testing.testcontainers.config.TestcontainersConfiguration  - All containers started in 25947ms
+42378 DEBUG org.microshed.testing.jaxrs.RestClientBuilder  - Using ApplicationPath of '/'
+42431 INFO org.microshed.testing.jaxrs.RestClientBuilder  - Building rest client for class org.example.app.PersonServiceWithJDBC with base path: http://localhost:32774/myservice/ and providers: [class org.microshed.testing.jaxrs.JsonBProvider]
+42771 DEBUG org.microshed.testing.jupiter.MicroShedTestExtension  - Injected rest client for public static org.example.app.PersonServiceWithJDBC org.example.app.DatabaseIT.personSvc
+42890 INFO org.microshed.testing.jaxrs.JsonBProvider  - Response from server: 2276384913302402925
+42971 INFO org.microshed.testing.jaxrs.JsonBProvider  - Response from server: -6070599159618625298
+42986 INFO org.microshed.testing.jaxrs.JsonBProvider  - Response from server: [{"age":1,"id":2276384913302402925,"name":"Person1"},{"age":25,"id":4981923830073752410,"name":"Sample Person A"},{"age":2,"id":-6070599159618625298,"name":"Person2"},{"age":26,"id":2877220136847166582,"name":"Sample Person B"}]
+43038 INFO org.microshed.testing.jaxrs.JsonBProvider  - Response from server: 5606531714038360342
+43049 INFO org.microshed.testing.jaxrs.JsonBProvider  - Response from server: {"age":24,"id":5606531714038360342,"name":"Bob"}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

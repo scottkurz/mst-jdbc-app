@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<failsafe-summary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/failsafe-summary.xsd" result="254" timeout="false">
+    <completed>0</completed>
+    <errors>0</errors>
+    <failures>0</failures>
+    <skipped>0</skipped>
+    <failureMessage>org.apache.maven.surefire.booter.SurefireBooterForkException: The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+Command was /bin/sh -c cd /Users/awisniew/Projects/MST/sandbox/jdbc-app &amp;&amp; /Library/Java/JavaVirtualMachines/adoptopenjdk-11-openj9.jdk/Contents/Home/bin/java -jar /Users/awisniew/Projects/MST/sandbox/jdbc-app/target/surefire/surefirebooter8882160650585577665.jar /Users/awisniew/Projects/MST/sandbox/jdbc-app/target/surefire 2020-05-27T14-54-46_393-jvmRun1 surefire8613872827227701019tmp surefire_014814868222859428222tmp
+Error occurred in starting fork, check output in log
+Process Exit Code: 143
+	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:670)
+	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:283)
+	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:246)
+	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1161)
+	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:1002)
+	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:848)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.twdata.maven.mojoexecutor.MojoExecutor.executeMojo(MojoExecutor.java:119)
+	at io.openliberty.tools.maven.server.DevMojo.runTestMojo(DevMojo.java:857)
+	at io.openliberty.tools.maven.server.DevMojo.access$6100(DevMojo.java:73)
+	at io.openliberty.tools.maven.server.DevMojo$DevMojoUtil.runIntegrationTests(DevMojo.java:615)
+	at io.openliberty.tools.common.plugins.util.DevUtil.runTests(DevUtil.java:398)
+	at io.openliberty.tools.common.plugins.util.DevUtil$TestJob.run(DevUtil.java:1864)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</failureMessage>
+</failsafe-summary>

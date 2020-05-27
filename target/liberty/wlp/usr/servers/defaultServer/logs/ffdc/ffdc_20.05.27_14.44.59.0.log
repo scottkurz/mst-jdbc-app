@@ -1,0 +1,418 @@
+------Start of DE processing------ = [5/27/20, 14:44:59:178 EDT]
+Exception = com.ibm.ws.config.xml.internal.AttributeValidationException
+Source = com.ibm.ws.config.xml.internal.ConfigEvaluator$1
+probeid = 342
+Stack Dump = com.ibm.ws.config.xml.internal.AttributeValidationException: Value "${POSTGRES_PORT}" is not a number.
+	at com.ibm.ws.config.xml.internal.ConfigEvaluator.processString(ConfigEvaluator.java:1349)
+	at com.ibm.ws.config.xml.internal.ConfigEvaluator.convertStringToSingleValue(ConfigEvaluator.java:944)
+	at com.ibm.ws.config.xml.internal.ConfigEvaluator.convertObjectToSingleValue(ConfigEvaluator.java:909)
+	at com.ibm.ws.config.xml.internal.ConfigEvaluator.evaluateMetaType(ConfigEvaluator.java:782)
+	at com.ibm.ws.config.xml.internal.ConfigEvaluator.evaluateMetaTypeAttribute(ConfigEvaluator.java:469)
+	at com.ibm.ws.config.xml.internal.ConfigEvaluator.evaluate(ConfigEvaluator.java:137)
+	at com.ibm.ws.config.xml.internal.ConfigEvaluator.evaluate(ConfigEvaluator.java:107)
+	at com.ibm.ws.config.xml.internal.ConfigEvaluator.flattenConfigElement(ConfigEvaluator.java:608)
+	at com.ibm.ws.config.xml.internal.ConfigEvaluator.evaluateFlatAttribute(ConfigEvaluator.java:597)
+	at com.ibm.ws.config.xml.internal.ConfigEvaluator.access$000(ConfigEvaluator.java:54)
+	at com.ibm.ws.config.xml.internal.ConfigEvaluator$1.entry(ConfigEvaluator.java:341)
+	at com.ibm.ws.config.xml.internal.MetaTypeRegistry$RegistryEntry.traverseHierarchy(MetaTypeRegistry.java:990)
+	at com.ibm.ws.config.xml.internal.MetaTypeRegistry$RegistryEntry.traverseHierarchy(MetaTypeRegistry.java:984)
+	at com.ibm.ws.config.xml.internal.MetaTypeRegistry$RegistryEntry.traverseHierarchy(MetaTypeRegistry.java:967)
+	at com.ibm.ws.config.xml.internal.ConfigEvaluator.evaluateMetaTypeAttribute(ConfigEvaluator.java:331)
+	at com.ibm.ws.config.xml.internal.ConfigEvaluator.evaluate(ConfigEvaluator.java:137)
+	at com.ibm.ws.config.xml.internal.ConfigEvaluator.evaluate(ConfigEvaluator.java:107)
+	at com.ibm.ws.config.xml.internal.ConfigEvaluator.evaluate(ConfigEvaluator.java:85)
+	at com.ibm.ws.config.xml.internal.ConfigUpdater.updateConfiguration(ConfigUpdater.java:190)
+	at com.ibm.ws.config.xml.internal.ConfigUpdater.update(ConfigUpdater.java:109)
+	at com.ibm.ws.config.xml.internal.ConfigUpdater.updateAndFireEvents(ConfigUpdater.java:625)
+	at com.ibm.ws.config.xml.internal.BundleProcessor.addBundles(BundleProcessor.java:445)
+	at com.ibm.ws.config.xml.internal.BundleProcessor.access$200(BundleProcessor.java:74)
+	at com.ibm.ws.config.xml.internal.BundleProcessor$3.successfulCompletion(BundleProcessor.java:372)
+	at com.ibm.ws.config.xml.internal.BundleProcessor$3.successfulCompletion(BundleProcessor.java:325)
+	at com.ibm.ws.threading.internal.NonCancelableResultFuture.callListeners(NonCancelableResultFuture.java:135)
+	at com.ibm.ws.threading.internal.FutureMonitorImpl.setResult(FutureMonitorImpl.java:143)
+	at com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl$NotificationImpl.setResult(RuntimeUpdateManagerImpl.java:209)
+	at com.ibm.ws.kernel.feature.internal.FeatureManager.updateFeatures(FeatureManager.java:1414)
+	at com.ibm.ws.kernel.feature.internal.FeatureManager.update(FeatureManager.java:736)
+	at com.ibm.ws.kernel.feature.internal.FeatureManager.processFeatureChanges(FeatureManager.java:844)
+	at com.ibm.ws.kernel.feature.internal.FeatureManager$1.run(FeatureManager.java:636)
+	at com.ibm.ws.threading.internal.ExecutorServiceImpl$RunnableWrapper.run(ExecutorServiceImpl.java:239)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+Dump of callerThis
+Object type = com.ibm.ws.config.xml.internal.ConfigEvaluator$1
+  result = null
+  val$attributeName = "properties"
+  val$context = class com.ibm.ws.config.xml.internal.EvaluationContext@60e1dfae
+    EMPTY_STRING = ""
+    result = class com.ibm.ws.config.xml.internal.ConfigEvaluator$EvaluationResult@2ee786c2
+      configElement = class com.ibm.ws.config.xml.internal.FactoryElement@16d78a95
+      properties = class com.ibm.ws.config.admin.ConfigurationDictionary@a4db3b0
+      references = class java.util.HashSet@891adb35
+      nestedResults = class java.util.HashMap@c7d8da5b
+      variables = null
+      pid = null
+      valid = true
+      unresolvedReferences = class java.util.HashSet@b4f04d7c
+      registryEntry = class com.ibm.ws.config.xml.internal.MetaTypeRegistry$RegistryEntry@826f05af
+      serialVersionUID = -532615335863117056
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@84dfe471
+    lookupStack = class java.util.LinkedList@330c79fb
+      size = "/* Could not access size */"
+      first = "/* Could not access first */"
+      last = "/* Could not access last */"
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      modCount = "/* Could not access modCount */"
+      MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+    cache = class java.util.HashMap@20de9e4d
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      DEFAULT_INITIAL_CAPACITY = "/* Could not access DEFAULT_INITIAL_CAPACITY */"
+      MAXIMUM_CAPACITY = "/* Could not access MAXIMUM_CAPACITY */"
+      DEFAULT_LOAD_FACTOR = "/* Could not access DEFAULT_LOAD_FACTOR */"
+      TREEIFY_THRESHOLD = "/* Could not access TREEIFY_THRESHOLD */"
+      UNTREEIFY_THRESHOLD = "/* Could not access UNTREEIFY_THRESHOLD */"
+      MIN_TREEIFY_CAPACITY = "/* Could not access MIN_TREEIFY_CAPACITY */"
+      table = "/* Could not access table */"
+      entrySet = "/* Could not access entrySet */"
+      size = "/* Could not access size */"
+      modCount = "/* Could not access modCount */"
+      threshold = "/* Could not access threshold */"
+      loadFactor = "/* Could not access loadFactor */"
+      keySet = "/* Could not access keySet */"
+      values = "/* Could not access values */"
+    processed = class java.util.HashSet@1f4ff819
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      map = "/* Could not access map */"
+      PRESENT = "/* Could not access PRESENT */"
+      MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+    variables = null
+    attributeMap = class java.util.LinkedHashMap@486d2dc2
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      head = "/* Could not access head */"
+      tail = "/* Could not access tail */"
+      accessOrder = "/* Could not access accessOrder */"
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      DEFAULT_INITIAL_CAPACITY = "/* Could not access DEFAULT_INITIAL_CAPACITY */"
+      MAXIMUM_CAPACITY = "/* Could not access MAXIMUM_CAPACITY */"
+      DEFAULT_LOAD_FACTOR = "/* Could not access DEFAULT_LOAD_FACTOR */"
+      TREEIFY_THRESHOLD = "/* Could not access TREEIFY_THRESHOLD */"
+      UNTREEIFY_THRESHOLD = "/* Could not access UNTREEIFY_THRESHOLD */"
+      MIN_TREEIFY_CAPACITY = "/* Could not access MIN_TREEIFY_CAPACITY */"
+      table = "/* Could not access table */"
+      entrySet = "/* Could not access entrySet */"
+      size = "/* Could not access size */"
+      modCount = "/* Could not access modCount */"
+      threshold = "/* Could not access threshold */"
+      loadFactor = "/* Could not access loadFactor */"
+      keySet = "/* Could not access keySet */"
+      values = "/* Could not access values */"
+    nested = class java.util.HashSet@f38108c3
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      map = "/* Could not access map */"
+      PRESENT = "/* Could not access PRESENT */"
+      MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+    attributeValueCopies = class java.util.ArrayList@bd8ae2c1
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      DEFAULT_CAPACITY = "/* Could not access DEFAULT_CAPACITY */"
+      EMPTY_ELEMENTDATA = "/* Could not access EMPTY_ELEMENTDATA */"
+      DEFAULTCAPACITY_EMPTY_ELEMENTDATA = "/* Could not access DEFAULTCAPACITY_EMPTY_ELEMENTDATA */"
+      elementData = "/* Could not access elementData */"
+      size = "/* Could not access size */"
+      MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+      modCount = "/* Could not access modCount */"
+      MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+    attribute = "properties"
+    variableEvaluator = class com.ibm.ws.config.xml.internal.VariableEvaluator@f5ce5289
+    serialVersionUID = -6262033632450953692
+    $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@6df7e26b
+      strings[0] = "TraceComponent[com.ibm.ws.config.xml.internal.EvaluationContext,class com.ibm.ws.config.xml.internal.EvaluationContext,[config],com.ibm.ws.config.internal.resources.ConfigMessages,null]"
+  val$flatPrefix = ""
+  val$config = class com.ibm.ws.config.xml.internal.FactoryElement@16d78a95
+    id = "DefaultDataSource"
+    serialVersionUID = -290568863603112051
+    $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@c8108175
+      strings[0] = "TraceComponent[com.ibm.ws.config.xml.internal.FactoryElement,class com.ibm.ws.config.xml.internal.FactoryElement,[config],com.ibm.ws.config.internal.resources.ConfigMessages,null]"
+    pid = "com.ibm.ws.jdbc.dataSource"
+    serialVersionUID = -9047414204686928380
+    $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@240e6838
+      strings[0] = "TraceComponent[com.ibm.ws.config.xml.internal.MetaTypeElement,class com.ibm.ws.config.xml.internal.MetaTypeElement,[config],com.ibm.ws.config.internal.resources.ConfigMessages,null]"
+    nodeName = "dataSource"
+    attributes = class com.ibm.ws.config.xml.internal.ConfigElement$GroupHashMap@4495ce2c
+      serialVersionUID = 3632130989008067578
+      comparator = "/* Could not access comparator */"
+      root = "/* Could not access root */"
+      size = "/* Could not access size */"
+      modCount = "/* Could not access modCount */"
+      entrySet = "/* Could not access entrySet */"
+      navigableKeySet = "/* Could not access navigableKeySet */"
+      descendingMap = "/* Could not access descendingMap */"
+      UNBOUNDED = "/* Could not access UNBOUNDED */"
+      RED = "/* Could not access RED */"
+      BLACK = "/* Could not access BLACK */"
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      keySet = "/* Could not access keySet */"
+      values = "/* Could not access values */"
+    sequenceId = 0
+    location = "bundleentry://101.fwk2046694990/OSGI-INF/wlp/defaultInstances.xml"
+    overrideLocation = "file:/Users/awisniew/Projects/MST/sandbox/jdbc-app/target/liberty/wlp/usr/servers/defaultServer/server.xml"
+    operations = class java.util.HashMap@a8400f7d
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      DEFAULT_INITIAL_CAPACITY = "/* Could not access DEFAULT_INITIAL_CAPACITY */"
+      MAXIMUM_CAPACITY = "/* Could not access MAXIMUM_CAPACITY */"
+      DEFAULT_LOAD_FACTOR = "/* Could not access DEFAULT_LOAD_FACTOR */"
+      TREEIFY_THRESHOLD = "/* Could not access TREEIFY_THRESHOLD */"
+      UNTREEIFY_THRESHOLD = "/* Could not access UNTREEIFY_THRESHOLD */"
+      MIN_TREEIFY_CAPACITY = "/* Could not access MIN_TREEIFY_CAPACITY */"
+      table = "/* Could not access table */"
+      entrySet = "/* Could not access entrySet */"
+      size = "/* Could not access size */"
+      modCount = "/* Could not access modCount */"
+      threshold = "/* Could not access threshold */"
+      loadFactor = "/* Could not access loadFactor */"
+      keySet = "/* Could not access keySet */"
+      values = "/* Could not access values */"
+    isTextOnly = true
+    elementValue = ""
+    parent = null
+    children = class java.util.ArrayList@117e6d41
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      DEFAULT_CAPACITY = "/* Could not access DEFAULT_CAPACITY */"
+      EMPTY_ELEMENTDATA = "/* Could not access EMPTY_ELEMENTDATA */"
+      DEFAULTCAPACITY_EMPTY_ELEMENTDATA = "/* Could not access DEFAULTCAPACITY_EMPTY_ELEMENTDATA */"
+      elementData = "/* Could not access elementData */"
+      size = "/* Could not access size */"
+      MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+      modCount = "/* Could not access modCount */"
+      MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+    childAttributeName = null
+    mergeBehavior = class com.ibm.ws.config.xml.internal.XMLConfigParser$MergeBehavior@2f97d21
+      MERGE = class com.ibm.ws.config.xml.internal.XMLConfigParser$MergeBehavior@2f97d21
+      REPLACE = class com.ibm.ws.config.xml.internal.XMLConfigParser$MergeBehavior@3254ddd3
+      IGNORE = class com.ibm.ws.config.xml.internal.XMLConfigParser$MergeBehavior@d64a7765
+      MERGE_WHEN_EXISTS = class com.ibm.ws.config.xml.internal.XMLConfigParser$MergeBehavior@f7adfbcf
+      MERGE_WHEN_MISSING = class com.ibm.ws.config.xml.internal.XMLConfigParser$MergeBehavior@3615dac2
+      $VALUES = class com.ibm.ws.config.xml.internal.XMLConfigParser$MergeBehavior[5]
+      name = "/* Could not access name */"
+      ordinal = "/* Could not access ordinal */"
+    docLocationStack = null
+    behaviorStack = null
+    CASE_INSENSITIVE = class com.ibm.ws.config.xml.internal.ConfigElement$1@988574c6
+      serialVersionUID = 2579770070088481384
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@61e9e7a9
+  val$i = class java.util.concurrent.atomic.AtomicInteger@86895cdc
+    serialVersionUID = "/* Could not access serialVersionUID */"
+    U = "/* Could not access U */"
+    VALUE = "/* Could not access VALUE */"
+    value = "/* Could not access value */"
+    serialVersionUID = "/* Could not access serialVersionUID */"
+  val$processedNames = class java.util.HashSet@b831d810
+    serialVersionUID = "/* Could not access serialVersionUID */"
+    map = "/* Could not access map */"
+    PRESENT = "/* Could not access PRESENT */"
+    MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+  val$ignoreWarnings = false
+  this$0 = class com.ibm.ws.config.xml.internal.ConfigEvaluator@990f31c5
+    tc = class com.ibm.websphere.ras.TraceComponent@759cea67
+      strings[0] = "TraceComponent[com.ibm.ws.config.xml.internal.ConfigEvaluator,class com.ibm.ws.config.xml.internal.ConfigEvaluator,[config],com.ibm.ws.config.internal.resources.ConfigMessages,null]"
+    ALL_PIDS = "*"
+    configRetriever = class com.ibm.ws.config.xml.internal.ConfigRetriever@b5c2b14c
+      tc = class com.ibm.websphere.ras.TraceComponent@28dd1495
+      caSupport = class com.ibm.ws.config.admin.internal.SystemConfigSupportImpl@b9b32eb0
+      configAdmin = class com.ibm.ws.config.admin.internal.ConfigurationAdminImpl@f92c9e46
+      variableRegistry = class com.ibm.ws.config.xml.internal.ConfigVariableRegistry@843523b8
+      serialVersionUID = -2418731197807035025
+    metatypeRegistry = class com.ibm.ws.config.xml.internal.MetaTypeRegistry@82b2b1f3
+      tc = class com.ibm.websphere.ras.TraceComponent@e806a017
+      MTP_REMOVED_TOPIC = "internal_mtp_removed"
+      MTP_ADDED_TOPIC = "internal_mtp_added"
+      UPDATED_PIDS = "internal_mtp_updated_pids"
+      BUNDLE = "internal_mtp_bundle"
+      MTP_INFO = "internal_mtp_info"
+      entryMap = class java.util.concurrent.ConcurrentHashMap@f929cae4
+      aliasMap = class java.util.concurrent.ConcurrentHashMap@62e42092
+      invalidEntryMap = class java.util.concurrent.ConcurrentHashMap@524ecca6
+      childAliasMap = class java.util.concurrent.ConcurrentHashMap@509130cd
+      childPidMap = class java.util.concurrent.ConcurrentHashMap@914c3b7d
+      serviceToObjectClassMap = class java.util.concurrent.ConcurrentHashMap@943f2b12
+      serviceToServicesMap = class java.util.concurrent.ConcurrentHashMap@b159013c
+      bundleMap = class java.util.concurrent.ConcurrentHashMap@d7cf9f6a
+      metaTypeTracker = class org.osgi.util.tracker.ServiceTracker@4a13b5cc
+      mtpTracker = null
+      serialVersionUID = -2893456135787297566
+    serverXMLConfig = class com.ibm.ws.config.xml.internal.ServerXMLConfiguration@1a5b3ef9
+      tc = class com.ibm.websphere.ras.TraceComponent@93a7f136
+      configRoot = class com.ibm.ws.kernel.service.location.internal.LocalFileResource@5c55a783
+      configDropinDefaults = class com.ibm.ws.kernel.service.location.internal.LocalFileResource@abc3df9b
+      configDropinOverrides = class com.ibm.ws.kernel.service.location.internal.LocalFileResource@6ecf5810
+      bundleContext = class org.eclipse.osgi.internal.framework.BundleContextImpl@d6fff6f5
+      serverConfiguration = class com.ibm.ws.config.xml.internal.ServerConfiguration@b84e8c13
+      CONFIG_DROPINS = "configDropins"
+      CONFIG_DROPIN_DEFAULTS = "configDropins/defaults/"
+      CONFIG_DROPIN_OVERRIDES = "configDropins/overrides/"
+      configReadTime = 1590605087604
+      parser = class com.ibm.ws.config.xml.internal.XMLConfigParser@1e28c10
+      serialVersionUID = -173981188152250166
+    variableEvaluator = class com.ibm.ws.config.xml.internal.VariableEvaluator@f5ce5289
+      variableRegistry = class com.ibm.ws.config.xml.internal.ConfigVariableRegistry@843523b8
+      stringUtils = class com.ibm.ws.config.xml.internal.StringUtils@8481d8d0
+      configEvaluator = class com.ibm.ws.config.xml.internal.ConfigEvaluator@990f31c5
+      serialVersionUID = 3435820265446668882
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@22df31a1
+    serialVersionUID = -4673704313582978563
+  serialVersionUID = -2084209042270298338
+  $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@9650a940
+    strings[0] = "TraceComponent[com.ibm.ws.config.xml.internal.ConfigEvaluator$1,class com.ibm.ws.config.xml.internal.ConfigEvaluator$1,[config],com.ibm.ws.config.internal.resources.ConfigMessages,null]"
+
+Dump of objectArray[0]
+Object type = com.ibm.ws.config.xml.internal.MetaTypeRegistry$RegistryEntry
+  pid = "com.ibm.ws.jdbc.dataSource.properties"
+  rootPid = "com.ibm.ws.jdbc.dataSource.properties.supertype"
+  factory = true
+  ocd = class com.ibm.ws.config.xml.internal.metatype.ExtendedObjectClassDefinitionImpl@7a9fe137
+    EXPOSED_FILTERS = class java.util.Arrays$ArrayList@35c8b3f
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      a = "/* Could not access a */"
+      modCount = "/* Could not access modCount */"
+      MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+    delegate = class org.eclipse.equinox.metatype.impl.ObjectClassDefinitionImpl@57acb27a
+      iconComparator = class org.eclipse.equinox.metatype.impl.ObjectClassDefinitionImpl$1@741fe200
+      _name = "%properties"
+      _id = "com.ibm.ws.jdbc.dataSource.properties"
+      _description = "%properties.desc"
+      _type = 0
+      _required = class java.util.ArrayList@b0972f4a
+      _optional = class java.util.ArrayList@567fee39
+      helper = class org.eclipse.equinox.metatype.impl.ExtendableHelper@6dee6d18
+      icons = null
+      KEY_SIGN = %
+      LOCALE_SEP = _
+      localization = "OSGI-INF/l10n/metatype"
+      bundle = class org.eclipse.osgi.internal.framework.EquinoxBundle@ee78824e
+      locale = null
+      resourceBundleCache = class java.util.concurrent.ConcurrentHashMap@597993ac
+    parentPid = null
+    alias = null
+    extraProperties = true
+    action = null
+    localization = "OSGI-INF/l10n/metatype"
+    supportsExtensions = false
+    supportsHiddenExtensions = false
+    extendsAlias = "!properties"
+    extendsAttribute = "com.ibm.ws.jdbc.dataSource.properties.supertype"
+    childAlias = null
+    anyCount = 0
+    excludedChildren = null
+    objectClass = null
+    requireExplicitConfiguration = false
+    pid = "com.ibm.ws.jdbc.dataSource.properties"
+    beta = false
+    serialVersionUID = -5356085438660987379
+    $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@7dd0ff7a
+      strings[0] = "TraceComponent[com.ibm.ws.config.xml.internal.metatype.ExtendedObjectClassDefinitionImpl,class com.ibm.ws.config.xml.internal.metatype.ExtendedObjectClassDefinitionImpl,[config],com.ibm.ws.config.internal.resources.ConfigMessages,null]"
+  bundleId = 101
+  bundleName = "com.ibm.ws.jdbc"
+  valid = true
+  effectiveAttributes = class java.util.LinkedHashMap@2b33a2ad
+    serialVersionUID = "/* Could not access serialVersionUID */"
+    head = "/* Could not access head */"
+    tail = "/* Could not access tail */"
+    accessOrder = "/* Could not access accessOrder */"
+    serialVersionUID = "/* Could not access serialVersionUID */"
+    DEFAULT_INITIAL_CAPACITY = "/* Could not access DEFAULT_INITIAL_CAPACITY */"
+    MAXIMUM_CAPACITY = "/* Could not access MAXIMUM_CAPACITY */"
+    DEFAULT_LOAD_FACTOR = "/* Could not access DEFAULT_LOAD_FACTOR */"
+    TREEIFY_THRESHOLD = "/* Could not access TREEIFY_THRESHOLD */"
+    UNTREEIFY_THRESHOLD = "/* Could not access UNTREEIFY_THRESHOLD */"
+    MIN_TREEIFY_CAPACITY = "/* Could not access MIN_TREEIFY_CAPACITY */"
+    table = "/* Could not access table */"
+    entrySet = "/* Could not access entrySet */"
+    size = "/* Could not access size */"
+    modCount = "/* Could not access modCount */"
+    threshold = "/* Could not access threshold */"
+    loadFactor = "/* Could not access loadFactor */"
+    keySet = "/* Could not access keySet */"
+    values = "/* Could not access values */"
+  requiredAttributeNames = class java.util.HashSet@e38deffe
+    serialVersionUID = "/* Could not access serialVersionUID */"
+    map = "/* Could not access map */"
+    PRESENT = "/* Could not access PRESENT */"
+    MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+  extenders = null
+  referencingPids = null
+  referencedPids = null
+  extendedRegistryEntry = class com.ibm.ws.config.xml.internal.MetaTypeRegistry$RegistryEntry@9f63df34
+    pid = "com.ibm.ws.jdbc.dataSource.properties.supertype"
+    rootPid = "com.ibm.ws.jdbc.dataSource.properties.supertype"
+    factory = true
+    ocd = class com.ibm.ws.config.xml.internal.metatype.ExtendedObjectClassDefinitionImpl@41354655
+      EXPOSED_FILTERS = class java.util.Arrays$ArrayList@35c8b3f
+      delegate = class org.eclipse.equinox.metatype.impl.ObjectClassDefinitionImpl@c8d930bc
+      parentPid = null
+      alias = null
+      extraProperties = true
+      action = null
+      localization = "OSGI-INF/l10n/metatype"
+      supportsExtensions = true
+      supportsHiddenExtensions = false
+      extendsAlias = null
+      extendsAttribute = null
+      childAlias = null
+      anyCount = 0
+      excludedChildren = null
+      objectClass = null
+      requireExplicitConfiguration = false
+      pid = "com.ibm.ws.jdbc.dataSource.properties.supertype"
+      beta = false
+      serialVersionUID = -5356085438660987379
+      $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@7dd0ff7a
+    bundleId = 101
+    bundleName = "com.ibm.ws.jdbc"
+    valid = true
+    effectiveAttributes = class java.util.LinkedHashMap@db36c401
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      head = "/* Could not access head */"
+      tail = "/* Could not access tail */"
+      accessOrder = "/* Could not access accessOrder */"
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      DEFAULT_INITIAL_CAPACITY = "/* Could not access DEFAULT_INITIAL_CAPACITY */"
+      MAXIMUM_CAPACITY = "/* Could not access MAXIMUM_CAPACITY */"
+      DEFAULT_LOAD_FACTOR = "/* Could not access DEFAULT_LOAD_FACTOR */"
+      TREEIFY_THRESHOLD = "/* Could not access TREEIFY_THRESHOLD */"
+      UNTREEIFY_THRESHOLD = "/* Could not access UNTREEIFY_THRESHOLD */"
+      MIN_TREEIFY_CAPACITY = "/* Could not access MIN_TREEIFY_CAPACITY */"
+      table = "/* Could not access table */"
+      entrySet = "/* Could not access entrySet */"
+      size = "/* Could not access size */"
+      modCount = "/* Could not access modCount */"
+      threshold = "/* Could not access threshold */"
+      loadFactor = "/* Could not access loadFactor */"
+      keySet = "/* Could not access keySet */"
+      values = "/* Could not access values */"
+    requiredAttributeNames = class java.util.HashSet@a9ffb303
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      map = "/* Could not access map */"
+      PRESENT = "/* Could not access PRESENT */"
+      MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+    extenders = class java.util.ArrayList@f40462b7
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      DEFAULT_CAPACITY = "/* Could not access DEFAULT_CAPACITY */"
+      EMPTY_ELEMENTDATA = "/* Could not access EMPTY_ELEMENTDATA */"
+      DEFAULTCAPACITY_EMPTY_ELEMENTDATA = "/* Could not access DEFAULTCAPACITY_EMPTY_ELEMENTDATA */"
+      elementData = "/* Could not access elementData */"
+      size = "/* Could not access size */"
+      MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+      modCount = "/* Could not access modCount */"
+      MAX_ARRAY_SIZE = "/* Could not access MAX_ARRAY_SIZE */"
+    referencingPids = class java.util.concurrent.CopyOnWriteArrayList@d68b4734
+      serialVersionUID = "/* Could not access serialVersionUID */"
+      lock = "/* Could not access lock */"
+      array = "/* Could not access array */"
+    referencedPids = null
+    extendedRegistryEntry = null
+    serialVersionUID = 283735249053069825
+    $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@8abd0585
+  serialVersionUID = 283735249053069825
+  $$$tc$$$ = class com.ibm.websphere.ras.TraceComponent@8abd0585
+    strings[0] = "TraceComponent[com.ibm.ws.config.xml.internal.MetaTypeRegistry$RegistryEntry,class com.ibm.ws.config.xml.internal.MetaTypeRegistry$RegistryEntry,[config],com.ibm.ws.config.internal.resources.ConfigMessages,null]"
+
