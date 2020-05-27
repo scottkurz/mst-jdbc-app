@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.example.app.DatabaseIT
--------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40.083 s - in org.example.app.DatabaseIT
