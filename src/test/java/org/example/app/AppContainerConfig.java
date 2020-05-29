@@ -18,9 +18,12 @@
  */
 package org.example.app;
 
+import java.time.Duration;
+
 import org.microshed.testing.SharedContainerConfiguration;
 import org.microshed.testing.testcontainers.ApplicationContainer;
 import org.testcontainers.containers.PostgreSQLContainer;
+import org.testcontainers.containers.wait.strategy.HttpWaitStrategy;
 import org.testcontainers.junit.jupiter.Container;
 
 public class AppContainerConfig implements SharedContainerConfiguration {
@@ -28,12 +31,14 @@ public class AppContainerConfig implements SharedContainerConfiguration {
 	@Container
 	public static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>()
 					.withNetworkAliases("testpostgres")
+					.withExposedPorts(5432)
 					.withDatabaseName("testdb");
 	
     @Container
     public static ApplicationContainer app = new ApplicationContainer()
                     .withAppContextRoot("/myservice")
                     .withEnv("POSTGRES_HOSTNAME", "testpostgres")
+                    .withReadinessPath("/myservice", 86400)
                     .withEnv("POSTGRES_PORT", "5432")
                     .dependsOn(postgres);
     
