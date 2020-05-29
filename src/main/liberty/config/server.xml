@@ -23,6 +23,8 @@
 		<file name="${server.config.dir}/resources/postgresql.jar"/>
 	</library>
 	
+    <webApplication id="guide-microshed-testing" location="guide-microshed-testing-1.0-SNAPSHOT.war" name="guide-microshed-testing" contextRoot="/"/>
+
 	<quickStartSecurity userName="bob" userPassword="bobpwd"> </quickStartSecurity>
 
 </server>

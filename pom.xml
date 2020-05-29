@@ -24,8 +24,11 @@
         <!-- Plugin versions -->
         <version.liberty-maven-plugin>3.2.1</version.liberty-maven-plugin>
         
-                <liberty.defaultVar.postgres.hostname>localhost</liberty.defaultVar.postgres.hostname>
-                <liberty.defaultVar.postgres.port>5432</liberty.defaultVar.postgres.port>
+           <liberty.defaultVar.aa.hostname>localhost</liberty.defaultVar.aa.hostname>
+        <!--
+           <liberty.defaultVar.postgres.hostname>localhost</liberty.defaultVar.postgres.hostname>
+           <liberty.defaultVar.postgres.port>51432</liberty.defaultVar.postgres.port>
+        -->
     </properties>
 
     <dependencies>
@@ -78,7 +81,9 @@
     </dependencies>
 
     <build>
+        <!--
         <finalName>myservice</finalName>
+        -->
         <plugins>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>

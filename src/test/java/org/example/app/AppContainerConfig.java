@@ -37,10 +37,10 @@ public class AppContainerConfig implements SharedContainerConfiguration {
 	
     @Container
     public static ApplicationContainer app = new ApplicationContainer()
-                    .withAppContextRoot("/myservice")
+                    .withAppContextRoot("/")
 					.withNetworkMode("postgresnet")
                     .withEnv("POSTGRES_HOSTNAME", "testpostgres")
-                    .withReadinessPath("/myservice", 86400)
+                    .withReadinessPath("/", 86400)
                     .withEnv("POSTGRES_PORT", "5432")
                     .dependsOn(postgres);
     
