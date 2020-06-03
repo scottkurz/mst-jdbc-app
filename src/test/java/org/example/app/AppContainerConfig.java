@@ -39,7 +39,7 @@ public class AppContainerConfig implements SharedContainerConfiguration {
     public static ApplicationContainer app = new ApplicationContainer()
                     .withAppContextRoot("/")
 					.withNetworkMode("postgresnet")
-					.withExposedPorts(7777)
+//					.withExposedPorts(7777)
                     .withEnv("POSTGRES_HOSTNAME", "testpostgres")
                     .withReadinessPath("/", 86400)
                     .withEnv("POSTGRES_PORT", "5432")
